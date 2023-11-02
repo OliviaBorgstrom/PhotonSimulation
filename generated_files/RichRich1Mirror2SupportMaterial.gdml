@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<position name="pvRich1Mirror2SupportTopinlvRich1SubMasterpos" unit="cm" x="0" y="717.49342929034799" z="-419.95155000423671"/>
+<rotation name="pvRich1Mirror2SupportTopinlvRich1SubMasterrot" unit="deg" x="14.699805191876401" y="-0" z="0"/>
+<position name="pvRich1Mirror2SupportBotinlvRich1SubMasterpos" unit="cm" x="0" y="-717.49342929034799" z="-419.95155000423671"/>
+<rotation name="pvRich1Mirror2SupportBotinlvRich1SubMasterrot" unit="deg" x="-14.699805191876401" y="-0" z="0"/>
+</define>
+<materials>
+<material name="Air">
+ <D unit="g/cm3" value="0.0011999999999999999"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+<element N="39" Z="18" formula="Ar" name="Ar_elm">
+ <atom unit="g/mole" value="39.947699999999998"/>
+</element>
+<element N="14" Z="7" formula="N" name="N_elm">
+ <atom unit="g/mole" value="14.0068"/>
+</element>
+<element N="15" Z="8" formula="O" name="O_elm">
+ <atom unit="g/mole" value="15.9994"/>
+</element>
+<element N="26" Z="13" formula="Al" name="Al_elm">
+ <atom unit="g/mole" value="26.9815"/>
+</element>
+<material name="RichRich1Mirror2SupportMaterial">
+ <D unit="g/cm3" value="2.7000000000000002"/>
+ <fraction n="1" ref="Al_elm"/>
+</material>
+</materials>
+<solids>
+<box name="world_volume_shape_0x4961250" x="100000" y="100000" z="100000" lunit="cm"/><box lunit="cm" name="Rich1Mirror2SupportTopBox_shape_0x479e750" x="1200" y="600" z="25"/>
+<box lunit="cm" name="Rich1Mirror2SupportBotBox_shape_0x479e6d0" x="1200" y="600" z="25"/>
+</solids>
+<structure>
+<volume name="lvRich1Mirror2SupportTop">
+ <materialref ref="RichRich1Mirror2SupportMaterial"/>
+ <solidref ref="Rich1Mirror2SupportTopBox_shape_0x479e750"/>
+</volume>
+<volume name="lvRich1Mirror2SupportBot">
+ <materialref ref="RichRich1Mirror2SupportMaterial"/>
+ <solidref ref="Rich1Mirror2SupportBotBox_shape_0x479e6d0"/>
+</volume>
+<volume name="world_volume"><materialref ref="Air"/><solidref ref="world_volume_shape_0x4961250"/><physvol copynumber="21" name="pvRich1Mirror2SupportTop">
+ <volumeref ref="lvRich1Mirror2SupportTop"/>
+ <positionref ref="pvRich1Mirror2SupportTopinlvRich1SubMasterpos"/>
+ <rotationref ref="pvRich1Mirror2SupportTopinlvRich1SubMasterrot"/>
+</physvol>
+<physvol copynumber="22" name="pvRich1Mirror2SupportBot">
+ <volumeref ref="lvRich1Mirror2SupportBot"/>
+ <positionref ref="pvRich1Mirror2SupportBotinlvRich1SubMasterpos"/>
+ <rotationref ref="pvRich1Mirror2SupportBotinlvRich1SubMasterrot"/>
+</physvol>
+</volume></structure>
+<setup name="default" version="1.0">
+<world ref="world_volume"/>
+</setup></gdml>

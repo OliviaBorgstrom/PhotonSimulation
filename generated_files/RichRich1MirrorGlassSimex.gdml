@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<matrix coldim="2" name="MirrorQuartzAbsLengthPT" values="1.6e-06 0.01 2e-06 0.01 2.5e-06 0.01 3e-06 0.01 3.5e-06 0.01 4e-06 0.01 4.5e-06 0.01 5e-06 0.01 5.5e-06 0.01 6e-06 0.01 6.5e-06 0.01"/>
+<matrix coldim="2" name="MirrorQuartzRindexPT" values="1.6e-06 1.4 2e-06 1.4 2.5e-06 1.4 3e-06 1.4 3.5e-06 1.4 4e-06 1.4 4.5e-06 1.4 5e-06 1.4 5.5e-06 1.4 6e-06 1.4 6.5e-06 1.4"/>
+<position name="pvRich1Mirror2Seg00inlvRich1Mirror2MasterToppos" unit="cm" x="559.50265047248672" y="224.00253950848881" z="778302.96890659153"/>
+<rotation name="pvRich1Mirror2Seg00inlvRich1Mirror2MasterToprot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg01inlvRich1Mirror2MasterToppos" unit="cm" x="186.50061214360559" y="224.00149441606072" z="1813302.9866541664"/>
+<rotation name="pvRich1Mirror2Seg01inlvRich1Mirror2MasterToprot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg02inlvRich1Mirror2MasterToppos" unit="cm" x="559.50199835938997" y="-219" z="1564902.984535753"/>
+<rotation name="pvRich1Mirror2Seg02inlvRich1Mirror2MasterToprot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg03inlvRich1Mirror2MasterToppos" unit="cm" x="186.50064452444548" y="-219" z="1722202.9859482057"/>
+<rotation name="pvRich1Mirror2Seg03inlvRich1Mirror2MasterToprot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg04inlvRich1Mirror2MasterToppos" unit="cm" x="-186.50070931049908" y="224.00293013099758" z="1564902.984535753"/>
+<rotation name="pvRich1Mirror2Seg04inlvRich1Mirror2MasterToprot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg05inlvRich1Mirror2MasterToppos" unit="cm" x="-559.50297607855396" y="224.00265708790457" z="712702.96604461933"/>
+<rotation name="pvRich1Mirror2Seg05inlvRich1Mirror2MasterToprot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg06inlvRich1Mirror2MasterToppos" unit="cm" x="-186.50175466329435" y="-219" z="632602.96174517903"/>
+<rotation name="pvRich1Mirror2Seg06inlvRich1Mirror2MasterToprot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg07inlvRich1Mirror2MasterToppos" unit="cm" x="-559.50418623840721" y="-219" z="1639802.9852421025"/>
+<rotation name="pvRich1Mirror2Seg07inlvRich1Mirror2MasterToprot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg08inlvRich1Mirror2MasterBotpos" unit="cm" x="559.50352706155888" y="219" z="1185102.9795797823"/>
+<rotation name="pvRich1Mirror2Seg08inlvRich1Mirror2MasterBotrot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg09inlvRich1Mirror2MasterBotpos" unit="cm" x="186.50129521586931" y="219" z="857002.97176196054"/>
+<rotation name="pvRich1Mirror2Seg09inlvRich1Mirror2MasterBotrot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg10inlvRich1Mirror2MasterBotpos" unit="cm" x="559.50297376586821" y="-224.00188029155927" z="1722202.9859482057"/>
+<rotation name="pvRich1Mirror2Seg10inlvRich1Mirror2MasterBotrot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg11inlvRich1Mirror2MasterBotpos" unit="cm" x="186.50116462071136" y="-224.00292521106891" z="953102.97460917023"/>
+<rotation name="pvRich1Mirror2Seg11inlvRich1Mirror2MasterBotrot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg12inlvRich1Mirror2MasterBotpos" unit="cm" x="-186.50041822086584" y="219" z="2654102.9908820316"/>
+<rotation name="pvRich1Mirror2Seg12inlvRich1Mirror2MasterBotrot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg13inlvRich1Mirror2MasterBotpos" unit="cm" x="-559.50190323654192" y="219" z="1040502.9767419511"/>
+<rotation name="pvRich1Mirror2Seg13inlvRich1Mirror2MasterBotrot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg14inlvRich1Mirror2MasterBotpos" unit="cm" x="-186.50077416655043" y="-224.00141797422475" z="1433802.9831217744"/>
+<rotation name="pvRich1Mirror2Seg14inlvRich1Mirror2MasterBotrot" unit="deg" x="-0" y="-90" z="0"/>
+<position name="pvRich1Mirror2Seg15inlvRich1Mirror2MasterBotpos" unit="cm" x="-559.50330299639518" y="-224.00335524747567" z="632602.96174517903"/>
+<rotation name="pvRich1Mirror2Seg15inlvRich1Mirror2MasterBotrot" unit="deg" x="-0" y="-90" z="0"/>
+</define>
+<materials>
+<material name="Air">
+ <D unit="g/cm3" value="0.0011999999999999999"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+<element N="39" Z="18" formula="Ar" name="Ar_elm">
+ <atom unit="g/mole" value="39.947699999999998"/>
+</element>
+<element N="14" Z="7" formula="N" name="N_elm">
+ <atom unit="g/mole" value="14.0068"/>
+</element>
+<element N="15" Z="8" formula="O" name="O_elm">
+ <atom unit="g/mole" value="15.9994"/>
+</element>
+<element N="26" Z="13" formula="Al" name="Al_elm">
+ <atom unit="g/mole" value="26.9815"/>
+</element>
+<element N="10" Z="5" formula="B" name="B_elm">
+ <atom unit="g/mole" value="10.811"/>
+</element>
+<element N="39" Z="19" formula="K" name="K_elm">
+ <atom unit="g/mole" value="39.098300000000002"/>
+</element>
+<element N="22" Z="11" formula="Na" name="Na_elm">
+ <atom unit="g/mole" value="22.989799999999999"/>
+</element>
+<element N="28" Z="14" formula="Si" name="Si_elm">
+ <atom unit="g/mole" value="28.0854"/>
+</element>
+<material name="RichRich1MirrorGlassSimex">
+ <property name="ABSLENGTH" ref="MirrorQuartzAbsLengthPT"/>
+ <property name="RINDEX" ref="MirrorQuartzRindexPT"/>
+ <D unit="g/cm3" value="2.23"/>
+ <fraction n="0.012702007777988911" ref="Al_elm"/>
+ <fraction n="0.040374200791120529" ref="B_elm"/>
+ <fraction n="0.017433103173971176" ref="K_elm"/>
+ <fraction n="0.015579012222588062" ref="Na_elm"/>
+ <fraction n="0.53809469938278198" ref="O_elm"/>
+ <fraction n="0.37581697106361389" ref="Si_elm"/>
+</material>
+</materials>
+<solids>
+<box name="world_volume_shape_0x4961250" x="100000" y="100000" z="100000" lunit="cm"/><sphere aunit="deg" deltaphi="0.032391294267767989" deltatheta="0.027238133391193742" lunit="cm" name="Rich1Mirror2Sph00_shape_0x4b85980" rmax="778306" rmin="778300" startphi="359.98380435286612" starttheta="89.986380933304403"/>
+<sphere aunit="deg" deltaphi="0.013902908086492971" deltatheta="0.011691081766372236" lunit="cm" name="Rich1Mirror2Sph01_shape_0x479e880" rmax="1813306" rmin="1813300" startphi="359.99304854595675" starttheta="89.994154459116814"/>
+<sphere aunit="deg" deltaphi="0.016109747151858755" deltatheta="0.013546832779965712" lunit="cm" name="Rich1Mirror2Sph02_shape_0x4c0ef60" rmax="1564906" rmin="1564900" startphi="359.99194512642407" starttheta="89.993226583610024"/>
+<sphere aunit="deg" deltaphi="0.014638336581128897" deltatheta="0.012309510267641599" lunit="cm" name="Rich1Mirror2Sph03_shape_0x4c0f390" rmax="1722206" rmin="1722200" startphi="359.99268083170944" starttheta="89.993845244866179"/>
+<sphere aunit="deg" deltaphi="0.016109747151858755" deltatheta="0.013546832779965712" lunit="cm" name="Rich1Mirror2Sph04_shape_0x4ba7380" rmax="1564906" rmin="1564900" startphi="359.99194512642407" starttheta="89.993226583610024"/>
+<sphere aunit="deg" deltaphi="0.035372729882396925" deltatheta="0.029745249575015009" lunit="cm" name="Rich1Mirror2Sph05_shape_0x4ba77e0" rmax="712706" rmin="712700" startphi="359.9823136350588" starttheta="89.985127375212485"/>
+<sphere aunit="deg" deltaphi="0.039851636134130786" deltatheta="0.033511602321439682" lunit="cm" name="Rich1Mirror2Sph06_shape_0x4ba7c40" rmax="632606" rmin="632600" startphi="359.98007418193293" starttheta="89.983244198839287"/>
+<sphere aunit="deg" deltaphi="0.015373913457892741" deltatheta="0.012928063544151769" lunit="cm" name="Rich1Mirror2Sph07_shape_0x4ba80a0" rmax="1639806" rmin="1639800" startphi="359.99231304327105" starttheta="89.993535968227917"/>
+<sphere aunit="deg" deltaphi="0.021272587600151383" deltatheta="0.017888312179763943" lunit="cm" name="Rich1Mirror2Sph08_shape_0x4b85ec0" rmax="1185106" rmin="1185100" startphi="359.98936370619992" starttheta="89.991055843910118"/>
+<sphere aunit="deg" deltaphi="0.029416737565156836" deltatheta="0.024736801725126156" lunit="cm" name="Rich1Mirror2Sph09_shape_0x4b862b0" rmax="857006" rmin="857000" startphi="359.98529163121742" starttheta="89.987631599137444"/>
+<sphere aunit="deg" deltaphi="0.014638336581128897" deltatheta="0.012309510267641599" lunit="cm" name="Rich1Mirror2Sph10_shape_0x4b86710" rmax="1722206" rmin="1722200" startphi="359.99268083170944" starttheta="89.993845244866179"/>
+<sphere aunit="deg" deltaphi="0.026450680811308303" deltatheta="0.022242617723549074" lunit="cm" name="Rich1Mirror2Sph11_shape_0x4b86b00" rmax="953106" rmin="953100" startphi="359.98677465959435" starttheta="89.988878691138225"/>
+<sphere aunit="deg" deltaphi="0.0094985656536437091" deltatheta="0.0079874301979998563" lunit="cm" name="Rich1Mirror2Sph12_shape_0x4be0500" rmax="2654106" rmin="2654100" startphi="359.99525071717318" starttheta="89.996006284901"/>
+<sphere aunit="deg" deltaphi="0.024228874326922778" deltatheta="0.020374280506118225" lunit="cm" name="Rich1Mirror2Sph13_shape_0x4be08f0" rmax="1040506" rmin="1040500" startphi="359.98788556283654" starttheta="89.989812859746934"/>
+<sphere aunit="deg" deltaphi="0.017582747511141861" deltatheta="0.014785492157287194" lunit="cm" name="Rich1Mirror2Sph14_shape_0x4be0ce0" rmax="1433806" rmin="1433800" startphi="359.99120862624443" starttheta="89.992607253921349"/>
+<sphere aunit="deg" deltaphi="0.039851636134130786" deltatheta="0.033511602321439682" lunit="cm" name="Rich1Mirror2Sph15_shape_0x4be10d0" rmax="632606" rmin="632600" startphi="359.98007418193293" starttheta="89.983244198839287"/>
+</solids>
+<structure>
+<volume name="lvRich1Mirror2Seg00">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph00_shape_0x4b85980"/>
+</volume>
+<volume name="lvRich1Mirror2Seg01">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph01_shape_0x479e880"/>
+</volume>
+<volume name="lvRich1Mirror2Seg02">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph02_shape_0x4c0ef60"/>
+</volume>
+<volume name="lvRich1Mirror2Seg03">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph03_shape_0x4c0f390"/>
+</volume>
+<volume name="lvRich1Mirror2Seg04">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph04_shape_0x4ba7380"/>
+</volume>
+<volume name="lvRich1Mirror2Seg05">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph05_shape_0x4ba77e0"/>
+</volume>
+<volume name="lvRich1Mirror2Seg06">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph06_shape_0x4ba7c40"/>
+</volume>
+<volume name="lvRich1Mirror2Seg07">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph07_shape_0x4ba80a0"/>
+</volume>
+<volume name="lvRich1Mirror2Seg08">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph08_shape_0x4b85ec0"/>
+</volume>
+<volume name="lvRich1Mirror2Seg09">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph09_shape_0x4b862b0"/>
+</volume>
+<volume name="lvRich1Mirror2Seg10">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph10_shape_0x4b86710"/>
+</volume>
+<volume name="lvRich1Mirror2Seg11">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph11_shape_0x4b86b00"/>
+</volume>
+<volume name="lvRich1Mirror2Seg12">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph12_shape_0x4be0500"/>
+</volume>
+<volume name="lvRich1Mirror2Seg13">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph13_shape_0x4be08f0"/>
+</volume>
+<volume name="lvRich1Mirror2Seg14">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph14_shape_0x4be0ce0"/>
+</volume>
+<volume name="lvRich1Mirror2Seg15">
+ <materialref ref="RichRich1MirrorGlassSimex"/>
+ <solidref ref="Rich1Mirror2Sph15_shape_0x4be10d0"/>
+</volume>
+<volume name="world_volume"><materialref ref="Air"/><solidref ref="world_volume_shape_0x4961250"/><physvol copynumber="0" name="pvRich1Mirror2Seg00">
+ <volumeref ref="lvRich1Mirror2Seg00"/>
+ <positionref ref="pvRich1Mirror2Seg00inlvRich1Mirror2MasterToppos"/>
+ <rotationref ref="pvRich1Mirror2Seg00inlvRich1Mirror2MasterToprot"/>
+</physvol>
+<physvol copynumber="1" name="pvRich1Mirror2Seg01">
+ <volumeref ref="lvRich1Mirror2Seg01"/>
+ <positionref ref="pvRich1Mirror2Seg01inlvRich1Mirror2MasterToppos"/>
+ <rotationref ref="pvRich1Mirror2Seg01inlvRich1Mirror2MasterToprot"/>
+</physvol>
+<physvol copynumber="2" name="pvRich1Mirror2Seg02">
+ <volumeref ref="lvRich1Mirror2Seg02"/>
+ <positionref ref="pvRich1Mirror2Seg02inlvRich1Mirror2MasterToppos"/>
+ <rotationref ref="pvRich1Mirror2Seg02inlvRich1Mirror2MasterToprot"/>
+</physvol>
+<physvol copynumber="3" name="pvRich1Mirror2Seg03">
+ <volumeref ref="lvRich1Mirror2Seg03"/>
+ <positionref ref="pvRich1Mirror2Seg03inlvRich1Mirror2MasterToppos"/>
+ <rotationref ref="pvRich1Mirror2Seg03inlvRich1Mirror2MasterToprot"/>
+</physvol>
+<physvol copynumber="4" name="pvRich1Mirror2Seg04">
+ <volumeref ref="lvRich1Mirror2Seg04"/>
+ <positionref ref="pvRich1Mirror2Seg04inlvRich1Mirror2MasterToppos"/>
+ <rotationref ref="pvRich1Mirror2Seg04inlvRich1Mirror2MasterToprot"/>
+</physvol>
+<physvol copynumber="5" name="pvRich1Mirror2Seg05">
+ <volumeref ref="lvRich1Mirror2Seg05"/>
+ <positionref ref="pvRich1Mirror2Seg05inlvRich1Mirror2MasterToppos"/>
+ <rotationref ref="pvRich1Mirror2Seg05inlvRich1Mirror2MasterToprot"/>
+</physvol>
+<physvol copynumber="6" name="pvRich1Mirror2Seg06">
+ <volumeref ref="lvRich1Mirror2Seg06"/>
+ <positionref ref="pvRich1Mirror2Seg06inlvRich1Mirror2MasterToppos"/>
+ <rotationref ref="pvRich1Mirror2Seg06inlvRich1Mirror2MasterToprot"/>
+</physvol>
+<physvol copynumber="7" name="pvRich1Mirror2Seg07">
+ <volumeref ref="lvRich1Mirror2Seg07"/>
+ <positionref ref="pvRich1Mirror2Seg07inlvRich1Mirror2MasterToppos"/>
+ <rotationref ref="pvRich1Mirror2Seg07inlvRich1Mirror2MasterToprot"/>
+</physvol>
+<physvol copynumber="8" name="pvRich1Mirror2Seg08">
+ <volumeref ref="lvRich1Mirror2Seg08"/>
+ <positionref ref="pvRich1Mirror2Seg08inlvRich1Mirror2MasterBotpos"/>
+ <rotationref ref="pvRich1Mirror2Seg08inlvRich1Mirror2MasterBotrot"/>
+</physvol>
+<physvol copynumber="9" name="pvRich1Mirror2Seg09">
+ <volumeref ref="lvRich1Mirror2Seg09"/>
+ <positionref ref="pvRich1Mirror2Seg09inlvRich1Mirror2MasterBotpos"/>
+ <rotationref ref="pvRich1Mirror2Seg09inlvRich1Mirror2MasterBotrot"/>
+</physvol>
+<physvol copynumber="10" name="pvRich1Mirror2Seg10">
+ <volumeref ref="lvRich1Mirror2Seg10"/>
+ <positionref ref="pvRich1Mirror2Seg10inlvRich1Mirror2MasterBotpos"/>
+ <rotationref ref="pvRich1Mirror2Seg10inlvRich1Mirror2MasterBotrot"/>
+</physvol>
+<physvol copynumber="11" name="pvRich1Mirror2Seg11">
+ <volumeref ref="lvRich1Mirror2Seg11"/>
+ <positionref ref="pvRich1Mirror2Seg11inlvRich1Mirror2MasterBotpos"/>
+ <rotationref ref="pvRich1Mirror2Seg11inlvRich1Mirror2MasterBotrot"/>
+</physvol>
+<physvol copynumber="12" name="pvRich1Mirror2Seg12">
+ <volumeref ref="lvRich1Mirror2Seg12"/>
+ <positionref ref="pvRich1Mirror2Seg12inlvRich1Mirror2MasterBotpos"/>
+ <rotationref ref="pvRich1Mirror2Seg12inlvRich1Mirror2MasterBotrot"/>
+</physvol>
+<physvol copynumber="13" name="pvRich1Mirror2Seg13">
+ <volumeref ref="lvRich1Mirror2Seg13"/>
+ <positionref ref="pvRich1Mirror2Seg13inlvRich1Mirror2MasterBotpos"/>
+ <rotationref ref="pvRich1Mirror2Seg13inlvRich1Mirror2MasterBotrot"/>
+</physvol>
+<physvol copynumber="14" name="pvRich1Mirror2Seg14">
+ <volumeref ref="lvRich1Mirror2Seg14"/>
+ <positionref ref="pvRich1Mirror2Seg14inlvRich1Mirror2MasterBotpos"/>
+ <rotationref ref="pvRich1Mirror2Seg14inlvRich1Mirror2MasterBotrot"/>
+</physvol>
+<physvol copynumber="15" name="pvRich1Mirror2Seg15">
+ <volumeref ref="lvRich1Mirror2Seg15"/>
+ <positionref ref="pvRich1Mirror2Seg15inlvRich1Mirror2MasterBotpos"/>
+ <rotationref ref="pvRich1Mirror2Seg15inlvRich1Mirror2MasterBotrot"/>
+</physvol>
+</volume></structure>
+<setup name="default" version="1.0">
+<world ref="world_volume"/>
+</setup></gdml>

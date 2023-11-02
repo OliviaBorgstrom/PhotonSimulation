@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<matrix coldim="2" name="PmtPhCathodeAbsLengthPT" values="1.6e-06 1e+15 2e-06 1e+15 2.5e-06 1e+15 3e-06 1e+15 3.5e-06 1e+15 4e-06 1e+15 4.5e-06 1e+15 5e-06 1e+15 5.5e-06 1e+15 6e-06 1e+15 6.5e-06 1e+15"/>
+<matrix coldim="2" name="PmtPhCathodeRIndexPT" values="1.6e-06 2.76 1.66e-06 2.83 1.78e-06 2.868 1.94e-06 2.94 2.07e-06 3.024 2.22e-06 3.177 2.39e-06 3.321 2.59e-06 3.708 2.83e-06 4.76 3.11e-06 4.68 3.45e-06 4.19 3.88e-06 4.19 4.14e-06 4.19 4.6e-06 4.19 5.18e-06 4.19 6.22e-06 4.19 6.5e-06 4.19"/>
+<position name="pvRichPMTPhCathodeinlvRichPMTSMasterpos" unit="cm" x="0" y="0" z="6.049999999999998"/>
+</define>
+<materials>
+<material name="Air">
+ <D unit="g/cm3" value="0.0011999999999999999"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+<element N="39" Z="18" formula="Ar" name="Ar_elm">
+ <atom unit="g/mole" value="39.947699999999998"/>
+</element>
+<element N="14" Z="7" formula="N" name="N_elm">
+ <atom unit="g/mole" value="14.0068"/>
+</element>
+<element N="15" Z="8" formula="O" name="O_elm">
+ <atom unit="g/mole" value="15.9994"/>
+</element>
+<element N="1" Z="1" formula="H" name="H_elm">
+ <atom unit="g/mole" value="1.0079400000000001"/>
+</element>
+<material name="RichRichPMTPhCathodeMaterial">
+ <property name="ABSLENGTH" ref="PmtPhCathodeAbsLengthPT"/>
+ <property name="RINDEX" ref="PmtPhCathodeRIndexPT"/>
+ <D unit="g/cm3" value="1e-25"/>
+ <fraction n="1" ref="H_elm"/>
+</material>
+</materials>
+<solids>
+<box name="world_volume_shape_0x4961250" x="100000" y="100000" z="100000" lunit="cm"/><box lunit="cm" name="RhPMTPhCathodeBox_shape_0x4c50c00" x="23" y="23" z="0.29999999999999999"/>
+</solids>
+<structure>
+<volume name="lvRichPMTPhCathode">
+ <materialref ref="RichRichPMTPhCathodeMaterial"/>
+ <solidref ref="RhPMTPhCathodeBox_shape_0x4c50c00"/>
+</volume>
+<volume name="world_volume"><materialref ref="Air"/><solidref ref="world_volume_shape_0x4961250"/><physvol copynumber="2" name="pvRichPMTPhCathode">
+ <volumeref ref="lvRichPMTPhCathode"/>
+ <positionref ref="pvRichPMTPhCathodeinlvRichPMTSMasterpos"/>
+</physvol>
+</volume></structure>
+<setup name="default" version="1.0">
+<world ref="world_volume"/>
+</setup></gdml>

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<position name="pvUX851Vacuum01inlvUX851InRich1BeforeSubMpos" unit="cm" x="0" y="0" z="10"/>
+<position name="pvUX851Vacuum05BinlvUX851InRich1AfterSubMpos" unit="cm" x="0" y="0" z="1217.5"/>
+<position name="pvUX851Vacuum06inlvUX851InRich1AfterSubMpos" unit="cm" x="0" y="0" z="1260.05"/>
+<position name="pvUX851Vacuum07AinlvUX851InRich1AfterSubMpos" unit="cm" x="0" y="0" z="1290.05"/>
+<position name="pvUX851Vacuum03BinlvUX851InRich1SubMasterpos" unit="cm" x="0" y="0" z="65"/>
+<position name="pvUX851Vacuum05AinlvUX851InRich1SubMasterpos" unit="cm" x="0" y="0" z="652.5"/>
+</define>
+<materials>
+<material name="Air">
+ <D unit="g/cm3" value="0.0011999999999999999"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+<element N="39" Z="18" formula="Ar" name="Ar_elm">
+ <atom unit="g/mole" value="39.947699999999998"/>
+</element>
+<element N="14" Z="7" formula="N" name="N_elm">
+ <atom unit="g/mole" value="14.0068"/>
+</element>
+<element N="15" Z="8" formula="O" name="O_elm">
+ <atom unit="g/mole" value="15.9994"/>
+</element>
+<material name="Vacuum">
+ <D unit="g/cm3" value="1e-10"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+</materials>
+<solids>
+<box name="world_volume_shape_0x4961250" x="100000" y="100000" z="100000" lunit="cm"/><tube aunit="deg" deltaphi="360" lunit="cm" name="UX85-1-Vacuum-01_shape_0x4b40630" rmax="27" rmin="0" startphi="0" z="20"/>
+<cone aunit="deg" deltaphi="360" lunit="cm" name="UX85-1-Vacuum-05B_shape_0x4b41370" rmax1="54.136278861390409" rmax2="55.210000000000001" rmin1="0" rmin2="0" startphi="0" z="45"/>
+<cone aunit="deg" deltaphi="360" lunit="cm" name="UX85-1-Vacuum-06_shape_0x4b41840" rmax1="55.210000000000001" rmax2="25" rmin1="0" rmin2="0" startphi="0" z="40.100000000000001"/>
+<tube aunit="deg" deltaphi="360" lunit="cm" name="UX85-1-Vacuum-07A_shape_0x4b41c80" rmax="25" rmin="0" startphi="0" z="19.899999999999999"/>
+<tube aunit="deg" deltaphi="360" lunit="cm" name="UX85-1-Vacuum-03B_shape_0x4b40b40" rmax="27" rmin="0" startphi="0" z="90"/>
+<cone aunit="deg" deltaphi="360" lunit="cm" name="UX85-1-Vacuum-05A_shape_0x4b40f80" rmax1="27" rmax2="54.136278861390409" rmin1="0" rmin2="0" startphi="0" z="1085"/>
+</solids>
+<structure>
+<volume name="lvUX851Vacuum01">
+ <materialref ref="Vacuum"/>
+ <solidref ref="UX85-1-Vacuum-01_shape_0x4b40630"/>
+</volume>
+<volume name="lvUX851Vacuum05B">
+ <materialref ref="Vacuum"/>
+ <solidref ref="UX85-1-Vacuum-05B_shape_0x4b41370"/>
+</volume>
+<volume name="lvUX851Vacuum06">
+ <materialref ref="Vacuum"/>
+ <solidref ref="UX85-1-Vacuum-06_shape_0x4b41840"/>
+</volume>
+<volume name="lvUX851Vacuum07A">
+ <materialref ref="Vacuum"/>
+ <solidref ref="UX85-1-Vacuum-07A_shape_0x4b41c80"/>
+</volume>
+<volume name="lvUX851Vacuum03B">
+ <materialref ref="Vacuum"/>
+ <solidref ref="UX85-1-Vacuum-03B_shape_0x4b40b40"/>
+</volume>
+<volume name="lvUX851Vacuum05A">
+ <materialref ref="Vacuum"/>
+ <solidref ref="UX85-1-Vacuum-05A_shape_0x4b40f80"/>
+</volume>
+<volume name="world_volume"><materialref ref="Air"/><solidref ref="world_volume_shape_0x4961250"/><physvol copynumber="3" name="pvUX851Vacuum01">
+ <volumeref ref="lvUX851Vacuum01"/>
+ <positionref ref="pvUX851Vacuum01inlvUX851InRich1BeforeSubMpos"/>
+</physvol>
+<physvol copynumber="3" name="pvUX851Vacuum05B">
+ <volumeref ref="lvUX851Vacuum05B"/>
+ <positionref ref="pvUX851Vacuum05BinlvUX851InRich1AfterSubMpos"/>
+</physvol>
+<physvol copynumber="4" name="pvUX851Vacuum06">
+ <volumeref ref="lvUX851Vacuum06"/>
+ <positionref ref="pvUX851Vacuum06inlvUX851InRich1AfterSubMpos"/>
+</physvol>
+<physvol copynumber="5" name="pvUX851Vacuum07A">
+ <volumeref ref="lvUX851Vacuum07A"/>
+ <positionref ref="pvUX851Vacuum07AinlvUX851InRich1AfterSubMpos"/>
+</physvol>
+<physvol copynumber="3" name="pvUX851Vacuum03B">
+ <volumeref ref="lvUX851Vacuum03B"/>
+ <positionref ref="pvUX851Vacuum03BinlvUX851InRich1SubMasterpos"/>
+</physvol>
+<physvol copynumber="5" name="pvUX851Vacuum05A">
+ <volumeref ref="lvUX851Vacuum05A"/>
+ <positionref ref="pvUX851Vacuum05AinlvUX851InRich1SubMasterpos"/>
+</physvol>
+</volume></structure>
+<setup name="default" version="1.0">
+<world ref="world_volume"/>
+</setup></gdml>

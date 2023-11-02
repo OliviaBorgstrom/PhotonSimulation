@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<position name="pvRichPMTAnode0000inlvRichPMTSMasterpos" unit="cm" x="0" y="0" z="-4.0500000000000016"/>
+</define>
+<materials>
+<material name="Air">
+ <D unit="g/cm3" value="0.0011999999999999999"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+<element N="39" Z="18" formula="Ar" name="Ar_elm">
+ <atom unit="g/mole" value="39.947699999999998"/>
+</element>
+<element N="14" Z="7" formula="N" name="N_elm">
+ <atom unit="g/mole" value="14.0068"/>
+</element>
+<element N="15" Z="8" formula="O" name="O_elm">
+ <atom unit="g/mole" value="15.9994"/>
+</element>
+<element N="28" Z="14" formula="Si" name="Si_elm">
+ <atom unit="g/mole" value="28.0854"/>
+</element>
+<material name="RichRichPMTAnodeMaterial">
+ <D unit="g/cm3" value="2.3300000000000001"/>
+ <fraction n="1" ref="Si_elm"/>
+</material>
+</materials>
+<solids>
+<box name="world_volume_shape_0x4961250" x="100000" y="100000" z="100000" lunit="cm"/><box lunit="cm" name="RhPMTAnodeBox0000_shape_0x4c3ed30" x="23" y="23" z="0.5"/>
+</solids>
+<structure>
+<volume name="lvRichPMTAnode0000">
+ <materialref ref="RichRichPMTAnodeMaterial"/>
+ <solidref ref="RhPMTAnodeBox0000_shape_0x4c3ed30"/>
+</volume>
+<volume name="world_volume"><materialref ref="Air"/><solidref ref="world_volume_shape_0x4961250"/><physvol copynumber="0" name="pvRichPMTAnode0000">
+ <volumeref ref="lvRichPMTAnode0000"/>
+ <positionref ref="pvRichPMTAnode0000inlvRichPMTSMasterpos"/>
+</physvol>
+</volume></structure>
+<setup name="default" version="1.0">
+<world ref="world_volume"/>
+</setup></gdml>

@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<position name="pvRich1MgsDnstrUTH0inlvRich1Masterpos" unit="cm" x="0" y="1799" z="888.5"/>
+<position name="pvRich1MgsDnstrUTH1inlvRich1Masterpos" unit="cm" x="0" y="-1799" z="888.5"/>
+<position name="pvRich1MgsOuterH0inlvRich1SubMasterpos" unit="cm" x="0" y="1415" z="-47.5"/>
+<position name="pvRich1MgsOuterH1inlvRich1SubMasterpos" unit="cm" x="0" y="-1415" z="-47.5"/>
+<position name="pvRich1MgsUpstrH0inlvRich1SubMasterpos" unit="cm" x="0" y="689.5" z="-610"/>
+<position name="pvRich1MgsUpstrH1inlvRich1SubMasterpos" unit="cm" x="0" y="-689.5" z="-610"/>
+<position name="pvRich1MgsSideQ0inlvRich1SubMasterpos" unit="cm" x="975" y="554.5" z="-22"/>
+<position name="pvRich1MgsSideQ1inlvRich1SubMasterpos" unit="cm" x="975" y="-554.5" z="-22"/>
+<rotation name="pvRich1MgsSideQ1inlvRich1SubMasterrot" unit="deg" x="0" y="-0" z="-180"/>
+<position name="pvRich1MgsSideQ2inlvRich1SubMasterpos" unit="cm" x="-975" y="-554.5" z="-22"/>
+<rotation name="pvRich1MgsSideQ2inlvRich1SubMasterrot" unit="deg" x="0" y="-0" z="-180"/>
+<position name="pvRich1MgsSideQ3inlvRich1SubMasterpos" unit="cm" x="-975" y="554.5" z="-22"/>
+<position name="pvRich1MgsUpstrCornerH0inlvRich1SubMasterpos" unit="cm" x="0" y="1624.5" z="-534.5"/>
+<position name="pvRich1MgsUpstrCornerH1inlvRich1SubMasterpos" unit="cm" x="0" y="-1624.5" z="-534.5"/>
+<position name="pvRich1MgsTeethQ0inlvRich1SubMasterpos" unit="cm" x="605" y="449" z="-610"/>
+<rotation name="pvRich1MgsTeethQ0inlvRich1SubMasterrot" unit="deg" x="90" y="-0" z="90"/>
+<position name="pvRich1MgsTeethQ1inlvRich1SubMasterpos" unit="cm" x="605" y="-449" z="-610"/>
+<rotation name="pvRich1MgsTeethQ1inlvRich1SubMasterrot" unit="deg" x="-90" y="-0" z="90"/>
+<position name="pvRich1MgsTeethQ2inlvRich1SubMasterpos" unit="cm" x="-605" y="-449" z="-610"/>
+<rotation name="pvRich1MgsTeethQ2inlvRich1SubMasterrot" unit="deg" x="-90" y="-0" z="-90"/>
+<position name="pvRich1MgsTeethQ3inlvRich1SubMasterpos" unit="cm" x="-605" y="449" z="-610"/>
+<rotation name="pvRich1MgsTeethQ3inlvRich1SubMasterrot" unit="deg" x="90" y="-0" z="-90"/>
+<position name="pvRich1MgsMidH0inlvRich1SubMasterpos" unit="cm" x="0" y="880" z="311.5"/>
+<position name="pvRich1MgsMidH1inlvRich1SubMasterpos" unit="cm" x="0" y="-880" z="311.5"/>
+</define>
+<materials>
+<material name="Air">
+ <D unit="g/cm3" value="0.0011999999999999999"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+<element N="39" Z="18" formula="Ar" name="Ar_elm">
+ <atom unit="g/mole" value="39.947699999999998"/>
+</element>
+<element N="14" Z="7" formula="N" name="N_elm">
+ <atom unit="g/mole" value="14.0068"/>
+</element>
+<element N="15" Z="8" formula="O" name="O_elm">
+ <atom unit="g/mole" value="15.9994"/>
+</element>
+<element N="55" Z="26" formula="Fe" name="Fe_elm">
+ <atom unit="g/mole" value="55.845100000000002"/>
+</element>
+<material name="RichRichSoftIron">
+ <D unit="g/cm3" value="7.8700000000000001"/>
+ <fraction n="1" ref="Fe_elm"/>
+</material>
+</materials>
+<solids>
+<box name="world_volume_shape_0x4961250" x="10000" y="10000" z="10000" lunit="cm"/><box lunit="cm" name="Rich1MgsDnstrUTSubBoxH0" x="2049" y="398" z="443"/>
+<box lunit="cm" name="Rich1MgsDnstrUTSubBoxH00x1" x="10000" y="10000" z="10000"/>
+<subtraction name="Rich1MgsDnstrBoxBoxUTH0_shape_0x4be6c70">
+ <first ref="Rich1MgsDnstrUTSubBoxH0"/>
+ <second ref="Rich1MgsDnstrUTSubBoxH00x1"/>
+ <position name="Rich1MgsDnstrBoxBoxUTH0_shape_0x4be6c70Rich1MgsDnstrUTSubBoxH00x1pos" unit="cm" x="0" y="-4999" z="-4878.5"/>
+</subtraction>
+<box lunit="cm" name="Rich1MgsDnstrUTSubBoxH1" x="2049" y="398" z="443"/>
+<box lunit="cm" name="Rich1MgsDnstrUTSubBoxH10x1" x="10000" y="10000" z="10000"/>
+<subtraction name="Rich1MgsDnstrBoxBoxUTH1_shape_0x4be64b0">
+ <first ref="Rich1MgsDnstrUTSubBoxH1"/>
+ <second ref="Rich1MgsDnstrUTSubBoxH10x1"/>
+ <position name="Rich1MgsDnstrBoxBoxUTH1_shape_0x4be64b0Rich1MgsDnstrUTSubBoxH10x1pos" unit="cm" x="0" y="4999" z="-4878.5"/>
+</subtraction>
+<box lunit="cm" name="Rich1MgsInnerBoxH0" x="2050" y="1170" z="1175"/>
+<box lunit="cm" name="Rich1MgsInnerBoxH00x1" x="1850" y="5000" z="1025"/>
+<subtraction name="lvRich1MgsOuterBoxBoxH0_shape_0x4bec860">
+ <first ref="Rich1MgsInnerBoxH0"/>
+ <second ref="Rich1MgsInnerBoxH00x1"/>
+ <position name="lvRich1MgsOuterBoxBoxH0_shape_0x4bec860Rich1MgsInnerBoxH00x1pos" unit="cm" x="0" y="-2015" z="-25"/>
+</subtraction>
+<box lunit="cm" name="Rich1MgsInnerBoxH1" x="2050" y="1170" z="1175"/>
+<box lunit="cm" name="Rich1MgsInnerBoxH10x1" x="1850" y="5000" z="1025"/>
+<subtraction name="lvRich1MgsOuterBoxBoxH1_shape_0x4c105d0">
+ <first ref="Rich1MgsInnerBoxH1"/>
+ <second ref="Rich1MgsInnerBoxH10x1"/>
+ <position name="lvRich1MgsOuterBoxBoxH1_shape_0x4c105d0Rich1MgsInnerBoxH10x1pos" unit="cm" x="0" y="2015" z="-25"/>
+</subtraction>
+<box lunit="cm" name="Rich1MgsUpstrH0_shape_0x4becf00" x="2050" y="279" z="50"/>
+<box lunit="cm" name="Rich1MgsUpstrH1_shape_0x4bf3120" x="2050" y="279" z="50"/>
+<box lunit="cm" name="Rich1MgsSideSubTrap" x="100" y="549" z="1124"/>
+<trd lunit="cm" name="Rich1MgsSideSubTrap0x1" x1="5000" x2="5000" y1="3392.6829268292681" y2="100" z="5000"/>
+<subtraction name="Rich1MgsSideBoxTrap_shape_0x4bed710">
+ <first ref="Rich1MgsSideSubTrap"/>
+ <second ref="Rich1MgsSideSubTrap0x1"/>
+ <position name="Rich1MgsSideBoxTrap_shape_0x4bed710Rich1MgsSideSubTrap0x1pos" unit="cm" x="0" y="-324.5" z="-2343"/>
+</subtraction>
+<box lunit="cm" name="Rich1MgsUpstrCornerBox_shape_0x4bf2910" x="1849.5" y="549" z="99"/>
+<trd lunit="cm" name="Rich1MgsTeethSubBox" x1="50" x2="50" y1="390" y2="910" z="198"/>
+<box lunit="cm" name="Rich1MgsTeethSubBox0x1" x="10000" y="10000" z="10000"/>
+<subtraction name="Rich1MgsTeethTrapBox_shape_0x4be1d60">
+ <first ref="Rich1MgsTeethSubBox"/>
+ <second ref="Rich1MgsTeethSubBox0x1"/>
+ <position name="Rich1MgsTeethTrapBox_shape_0x4be1d60Rich1MgsTeethSubBox0x1pos" unit="cm" x="0" y="5819.967594956719" z="0"/>
+ <rotation name="Rich1MgsTeethTrapBox_shape_0x4be1d60Rich1MgsTeethSubBox0x1rot" unit="deg" x="-26.796081293973469" y="-0" z="0"/>
+</subtraction>
+<box lunit="cm" name="Rich1MgsDnsMidPartBoxH0_shape_0x4be6870" x="1850" y="100" z="253"/>
+<box lunit="cm" name="Rich1MgsDnsMidPartBoxH1_shape_0x4bf1f80" x="1850" y="100" z="253"/>
+</solids>
+<structure>
+<volume name="lvRich1MgsDnstrUTH0">
+ <materialref ref="RichRichSoftIron"/>
+ <solidref ref="Rich1MgsDnstrBoxBoxUTH0_shape_0x4be6c70"/>
+</volume>
+<volume name="lvRich1MgsDnstrUTH1">
+ <materialref ref="RichRichSoftIron"/>
+ <solidref ref="Rich1MgsDnstrBoxBoxUTH1_shape_0x4be64b0"/>
+</volume>
+<volume name="lvRich1MgsOuterH0">
+ <materialref ref="RichRichSoftIron"/>
+ <solidref ref="lvRich1MgsOuterBoxBoxH0_shape_0x4bec860"/>
+</volume>
+<volume name="lvRich1MgsOuterH1">
+ <materialref ref="RichRichSoftIron"/>
+ <solidref ref="lvRich1MgsOuterBoxBoxH1_shape_0x4c105d0"/>
+</volume>
+<volume name="lvRich1MgsUpstrH0">
+ <materialref ref="RichRichSoftIron"/>
+ <solidref ref="Rich1MgsUpstrH0_shape_0x4becf00"/>
+</volume>
+<volume name="lvRich1MgsUpstrH1">
+ <materialref ref="RichRichSoftIron"/>
+ <solidref ref="Rich1MgsUpstrH1_shape_0x4bf3120"/>
+</volume>
+<volume name="lvRich1MgsSide">
+ <materialref ref="RichRichSoftIron"/>
+ <solidref ref="Rich1MgsSideBoxTrap_shape_0x4bed710"/>
+</volume>
+<volume name="lvRich1MgsUpstrCorner">
+ <materialref ref="RichRichSoftIron"/>
+ <solidref ref="Rich1MgsUpstrCornerBox_shape_0x4bf2910"/>
+</volume>
+<volume name="lvRich1MgsTeeth">
+ <materialref ref="RichRichSoftIron"/>
+ <solidref ref="Rich1MgsTeethTrapBox_shape_0x4be1d60"/>
+</volume>
+<volume name="lvRich1MgsMidH0">
+ <materialref ref="RichRichSoftIron"/>
+ <solidref ref="Rich1MgsDnsMidPartBoxH0_shape_0x4be6870"/>
+</volume>
+<volume name="lvRich1MgsMidH1">
+ <materialref ref="RichRichSoftIron"/>
+ <solidref ref="Rich1MgsDnsMidPartBoxH1_shape_0x4bf1f80"/>
+</volume>
+<volume name="world_volume"><materialref ref="Air"/><solidref ref="world_volume_shape_0x4961250"/><physvol copynumber="180" name="pvRich1MgsDnstrUTH0">
+ <volumeref ref="lvRich1MgsDnstrUTH0"/>
+ <positionref ref="pvRich1MgsDnstrUTH0inlvRich1Masterpos"/>
+</physvol>
+<physvol copynumber="181" name="pvRich1MgsDnstrUTH1">
+ <volumeref ref="lvRich1MgsDnstrUTH1"/>
+ <positionref ref="pvRich1MgsDnstrUTH1inlvRich1Masterpos"/>
+</physvol>
+<physvol copynumber="150" name="pvRich1MgsOuterH0">
+ <volumeref ref="lvRich1MgsOuterH0"/>
+ <positionref ref="pvRich1MgsOuterH0inlvRich1SubMasterpos"/>
+</physvol>
+<physvol copynumber="151" name="pvRich1MgsOuterH1">
+ <volumeref ref="lvRich1MgsOuterH1"/>
+ <positionref ref="pvRich1MgsOuterH1inlvRich1SubMasterpos"/>
+</physvol>
+<physvol copynumber="152" name="pvRich1MgsUpstrH0">
+ <volumeref ref="lvRich1MgsUpstrH0"/>
+ <positionref ref="pvRich1MgsUpstrH0inlvRich1SubMasterpos"/>
+</physvol>
+<physvol copynumber="153" name="pvRich1MgsUpstrH1">
+ <volumeref ref="lvRich1MgsUpstrH1"/>
+ <positionref ref="pvRich1MgsUpstrH1inlvRich1SubMasterpos"/>
+</physvol>
+<physvol copynumber="154" name="pvRich1MgsSideQ0">
+ <volumeref ref="lvRich1MgsSide"/>
+ <positionref ref="pvRich1MgsSideQ0inlvRich1SubMasterpos"/>
+</physvol>
+<physvol copynumber="155" name="pvRich1MgsSideQ1">
+ <volumeref ref="lvRich1MgsSide"/>
+ <positionref ref="pvRich1MgsSideQ1inlvRich1SubMasterpos"/>
+ <rotationref ref="pvRich1MgsSideQ1inlvRich1SubMasterrot"/>
+</physvol>
+<physvol copynumber="156" name="pvRich1MgsSideQ2">
+ <volumeref ref="lvRich1MgsSide"/>
+ <positionref ref="pvRich1MgsSideQ2inlvRich1SubMasterpos"/>
+ <rotationref ref="pvRich1MgsSideQ2inlvRich1SubMasterrot"/>
+</physvol>
+<physvol copynumber="157" name="pvRich1MgsSideQ3">
+ <volumeref ref="lvRich1MgsSide"/>
+ <positionref ref="pvRich1MgsSideQ3inlvRich1SubMasterpos"/>
+</physvol>
+<physvol copynumber="158" name="pvRich1MgsUpstrCornerH0">
+ <volumeref ref="lvRich1MgsUpstrCorner"/>
+ <positionref ref="pvRich1MgsUpstrCornerH0inlvRich1SubMasterpos"/>
+</physvol>
+<physvol copynumber="159" name="pvRich1MgsUpstrCornerH1">
+ <volumeref ref="lvRich1MgsUpstrCorner"/>
+ <positionref ref="pvRich1MgsUpstrCornerH1inlvRich1SubMasterpos"/>
+</physvol>
+<physvol copynumber="160" name="pvRich1MgsTeethQ0">
+ <volumeref ref="lvRich1MgsTeeth"/>
+ <positionref ref="pvRich1MgsTeethQ0inlvRich1SubMasterpos"/>
+ <rotationref ref="pvRich1MgsTeethQ0inlvRich1SubMasterrot"/>
+</physvol>
+<physvol copynumber="161" name="pvRich1MgsTeethQ1">
+ <volumeref ref="lvRich1MgsTeeth"/>
+ <positionref ref="pvRich1MgsTeethQ1inlvRich1SubMasterpos"/>
+ <rotationref ref="pvRich1MgsTeethQ1inlvRich1SubMasterrot"/>
+</physvol>
+<physvol copynumber="162" name="pvRich1MgsTeethQ2">
+ <volumeref ref="lvRich1MgsTeeth"/>
+ <positionref ref="pvRich1MgsTeethQ2inlvRich1SubMasterpos"/>
+ <rotationref ref="pvRich1MgsTeethQ2inlvRich1SubMasterrot"/>
+</physvol>
+<physvol copynumber="163" name="pvRich1MgsTeethQ3">
+ <volumeref ref="lvRich1MgsTeeth"/>
+ <positionref ref="pvRich1MgsTeethQ3inlvRich1SubMasterpos"/>
+ <rotationref ref="pvRich1MgsTeethQ3inlvRich1SubMasterrot"/>
+</physvol>
+<physvol copynumber="164" name="pvRich1MgsMidH0">
+ <volumeref ref="lvRich1MgsMidH0"/>
+ <positionref ref="pvRich1MgsMidH0inlvRich1SubMasterpos"/>
+</physvol>
+<physvol copynumber="165" name="pvRich1MgsMidH1">
+ <volumeref ref="lvRich1MgsMidH1"/>
+ <positionref ref="pvRich1MgsMidH1inlvRich1SubMasterpos"/>
+</physvol>
+</volume></structure>
+<setup name="default" version="1.0">
+<world ref="world_volume"/>
+</setup></gdml>

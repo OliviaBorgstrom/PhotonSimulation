@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<matrix coldim="2" name="GasWindowQuartzAbsLengthPT" values="1.6e-06 1e+18 1.75e-06 1e+18 2e-06 1e+18 2.5e-06 1e+18 3e-06 1e+18 3.5e-06 1e+18 4e-06 1e+18 4.5e-06 1e+18 5e-06 1e+18 5.5e-06 1e+18 5.65057e-06 1e+18 6.21563e-06 494.983 6.5e-06 194.957"/>
+<matrix coldim="2" name="GasWindowQuartzRIndexPT" values="1.6e-06 1.46 1.75e-06 1.46 2e-06 1.46 2.5e-06 1.46 3e-06 1.46 3.5e-06 1.46 4e-06 1.46 4.5e-06 1.46 5e-06 1.46 5.5e-06 1.46 5.65057e-06 1.46 6.21563e-06 1.46 6.5e-06 1.46"/>
+<matrix coldim="2" name="GasWindowQuartzCkvRIndexPT" values="1.6e-06 1.46 1.75e-06 1.46 2e-06 1.46 2.5e-06 1.46 3e-06 1.46 3.5e-06 1.46 4e-06 1.46 4.5e-06 1.46 5e-06 1.46 5.5e-06 1.46 5.65057e-06 1.46 6.21563e-06 1.46 6.5e-06 1.46"/>
+<position name="pvRich1GQuartzWH0inlvRich1MagShH0pos" unit="cm" x="0" y="-227.28784600000017" z="-179.23659936804324"/>
+<rotation name="pvRich1GQuartzWH0inlvRich1MagShH0rot" unit="deg" x="57.799982137681198" y="-0" z="0"/>
+<position name="pvRich1GQuartzWH1inlvRich1MagShH1pos" unit="cm" x="0" y="227.28784600000017" z="-179.23659936804324"/>
+<rotation name="pvRich1GQuartzWH1inlvRich1MagShH1rot" unit="deg" x="-57.799982137681198" y="-0" z="0"/>
+</define>
+<materials>
+<material name="Air">
+ <D unit="g/cm3" value="0.0011999999999999999"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+<element N="39" Z="18" formula="Ar" name="Ar_elm">
+ <atom unit="g/mole" value="39.947699999999998"/>
+</element>
+<element N="14" Z="7" formula="N" name="N_elm">
+ <atom unit="g/mole" value="14.0068"/>
+</element>
+<element N="15" Z="8" formula="O" name="O_elm">
+ <atom unit="g/mole" value="15.9994"/>
+</element>
+<element N="28" Z="14" formula="Si" name="Si_elm">
+ <atom unit="g/mole" value="28.0854"/>
+</element>
+<material name="RichRich1GasWindowQuartz">
+ <property name="ABSLENGTH" ref="GasWindowQuartzAbsLengthPT"/>
+ <property name="RINDEX" ref="GasWindowQuartzRIndexPT"/>
+ <property name="CKVRNDX" ref="GasWindowQuartzCkvRIndexPT"/>
+ <D unit="g/cm3" value="2.2000000000000002"/>
+ <fraction n="0.53256595134735107" ref="O_elm"/>
+ <fraction n="0.46743404865264893" ref="Si_elm"/>
+</material>
+</materials>
+<solids>
+<box name="world_volume_shape_0x4961250" x="100000" y="100000" z="100000" lunit="cm"/><box lunit="cm" name="Rich1GasQuartzW_shape_0x4bed8f0" x="1550" y="800" z="6"/>
+</solids>
+<structure>
+<volume name="lvRich1GQuartzW">
+ <materialref ref="RichRich1GasWindowQuartz"/>
+ <solidref ref="Rich1GasQuartzW_shape_0x4bed8f0"/>
+</volume>
+<volume name="world_volume"><materialref ref="Air"/><solidref ref="world_volume_shape_0x4961250"/><physvol copynumber="10" name="pvRich1GQuartzWH0">
+ <volumeref ref="lvRich1GQuartzW"/>
+ <positionref ref="pvRich1GQuartzWH0inlvRich1MagShH0pos"/>
+ <rotationref ref="pvRich1GQuartzWH0inlvRich1MagShH0rot"/>
+</physvol>
+<physvol copynumber="11" name="pvRich1GQuartzWH1">
+ <volumeref ref="lvRich1GQuartzW"/>
+ <positionref ref="pvRich1GQuartzWH1inlvRich1MagShH1pos"/>
+ <rotationref ref="pvRich1GQuartzWH1inlvRich1MagShH1rot"/>
+</physvol>
+</volume></structure>
+<setup name="default" version="1.0">
+<world ref="world_volume"/>
+</setup></gdml>

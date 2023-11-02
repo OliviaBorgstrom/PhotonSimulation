@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<matrix coldim="2" name="PMTWindowQuartzAbsLengthPT" values="1.6e-06 1e+15 2e-06 1e+15 2.5e-06 1e+15 3e-06 1e+15 3.5e-06 1e+15 4e-06 1e+15 4.5e-06 1e+15 5e-06 1e+15 5.5e-06 1e+15 6e-06 1e+15 6.5e-06 1e+15"/>
+<matrix coldim="2" name="PmtWindowQuartzRIndexPT" values="1.6e-06 1.45337 1.78e-06 1.45535 1.8e-06 1.45558 1.83e-06 1.45582 1.86e-06 1.45607 1.89e-06 1.45646 2.11e-06 1.45851 2.12e-06 1.45857 2.28e-06 1.46021 2.56e-06 1.46324 2.85e-06 1.46679 3.12e-06 1.47028 3.44e-06 1.4752 3.59e-06 1.47766 3.65e-06 1.47877 3.79e-06 1.48183 4.17e-06 1.48859 4.52e-06 1.49634 4.83e-06 1.50397 4.9e-06 1.5059 4.97e-06 1.50762 5.34e-06 1.51834 5.49e-06 1.52318 5.8e-06 1.53385 6.03e-06 1.54269 6.14e-06 1.54729 6.42e-06 1.56071 6.5e-06 1.56286"/>
+<matrix coldim="2" name="PmtWindowQuartzCkvRIndexPT" values="1.6e-06 1.45337 1.78e-06 1.45535 1.8e-06 1.45558 1.83e-06 1.45582 1.86e-06 1.45607 1.89e-06 1.45646 2.11e-06 1.45851 2.12e-06 1.45857 2.28e-06 1.46021 2.56e-06 1.46324 2.85e-06 1.46679 3.12e-06 1.47028 3.44e-06 1.4752 3.59e-06 1.47766 3.65e-06 1.47877 3.79e-06 1.48183 4.17e-06 1.48859 4.52e-06 1.49634 4.83e-06 1.50397 4.9e-06 1.5059 4.97e-06 1.50762 5.34e-06 1.51834 5.49e-06 1.52318 5.8e-06 1.53385 6.03e-06 1.54269 6.14e-06 1.54729 6.42e-06 1.56071 6.5e-06 1.56286"/>
+<position name="pvRichPMTQuartzinlvRichPMTSMasterpos" unit="cm" x="0" y="0" z="6.5999999999999988"/>
+</define>
+<materials>
+<material name="Air">
+ <D unit="g/cm3" value="0.0011999999999999999"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+<element N="39" Z="18" formula="Ar" name="Ar_elm">
+ <atom unit="g/mole" value="39.947699999999998"/>
+</element>
+<element N="14" Z="7" formula="N" name="N_elm">
+ <atom unit="g/mole" value="14.0068"/>
+</element>
+<element N="15" Z="8" formula="O" name="O_elm">
+ <atom unit="g/mole" value="15.9994"/>
+</element>
+<element N="28" Z="14" formula="Si" name="Si_elm">
+ <atom unit="g/mole" value="28.0854"/>
+</element>
+<material name="RichRichPMTQuartzMaterial">
+ <property name="ABSLENGTH" ref="PMTWindowQuartzAbsLengthPT"/>
+ <property name="RINDEX" ref="PmtWindowQuartzRIndexPT"/>
+ <property name="CKVRNDX" ref="PmtWindowQuartzCkvRIndexPT"/>
+ <D unit="g/cm3" value="2.2000000000000002"/>
+ <fraction n="0.53256595134735107" ref="O_elm"/>
+ <fraction n="0.46743404865264893" ref="Si_elm"/>
+</material>
+</materials>
+<solids>
+<box name="world_volume_shape_0x4961250" x="100000" y="100000" z="100000" lunit="cm"/><box lunit="cm" name="RhPMTQuartzBox_shape_0x4c51130" x="25.199999999999999" y="25.199999999999999" z="0.80000000000000004"/>
+</solids>
+<structure>
+<volume name="lvRichPMTQuartz">
+ <materialref ref="RichRichPMTQuartzMaterial"/>
+ <solidref ref="RhPMTQuartzBox_shape_0x4c51130"/>
+</volume>
+<volume name="world_volume"><materialref ref="Air"/><solidref ref="world_volume_shape_0x4961250"/><physvol copynumber="1" name="pvRichPMTQuartz">
+ <volumeref ref="lvRichPMTQuartz"/>
+ <positionref ref="pvRichPMTQuartzinlvRichPMTSMasterpos"/>
+</physvol>
+</volume></structure>
+<setup name="default" version="1.0">
+<world ref="world_volume"/>
+</setup></gdml>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<position name="pvRichPMTSideEnvelopeinlvRichPMTSMasterpos" unit="cm" x="0" y="0" z="-1.0000000000000018"/>
+<position name="pvRichPMTBackEnvelopeinlvRichPMTSMasterpos" unit="cm" x="0" y="0" z="-8.6000000000000014"/>
+<position name="pvRichPMTFrontRinginlvRichPMTSMasterpos" unit="cm" x="0" y="0" z="7.4499999999999993"/>
+</define>
+<materials>
+<material name="Air">
+ <D unit="g/cm3" value="0.0011999999999999999"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+<element N="39" Z="18" formula="Ar" name="Ar_elm">
+ <atom unit="g/mole" value="39.947699999999998"/>
+</element>
+<element N="14" Z="7" formula="N" name="N_elm">
+ <atom unit="g/mole" value="14.0068"/>
+</element>
+<element N="15" Z="8" formula="O" name="O_elm">
+ <atom unit="g/mole" value="15.9994"/>
+</element>
+<element N="26" Z="13" formula="Al" name="Al_elm">
+ <atom unit="g/mole" value="26.9815"/>
+</element>
+<material name="RichRichPMTEnvelopeMaterial">
+ <D unit="g/cm3" value="2.7000000000000002"/>
+ <fraction n="1" ref="Al_elm"/>
+</material>
+</materials>
+<solids>
+<box name="world_volume_shape_0x4961250" x="100000" y="100000" z="100000" lunit="cm"/><box lunit="cm" name="RhPMTSideEnvelopeHoleBox" x="26.149999999999999" y="26.149999999999999" z="14"/>
+<box lunit="cm" name="RhPMTSideEnvelopeHoleBox0x1" x="23.75" y="23.75" z="1000"/>
+<subtraction name="RichPMTSideEnvSubract_shape_0x4c4e510">
+ <first ref="RhPMTSideEnvelopeHoleBox"/>
+ <second ref="RhPMTSideEnvelopeHoleBox0x1"/>
+</subtraction>
+<box lunit="cm" name="RhPMTBackEnvBox_shape_0x4cbeb50" x="26.149999999999999" y="26.149999999999999" z="0.80000000000000004"/>
+<box lunit="cm" name="RichPMTFrontEnvHoleBox" x="26.149999999999999" y="26.149999999999999" z="0.5"/>
+<box lunit="cm" name="RichPMTFrontEnvHoleBox0x1" x="23.75" y="23.75" z="1000"/>
+<subtraction name="RichPMTFrontEnvSubtract_shape_0x4be51d0">
+ <first ref="RichPMTFrontEnvHoleBox"/>
+ <second ref="RichPMTFrontEnvHoleBox0x1"/>
+</subtraction>
+</solids>
+<structure>
+<volume name="lvRichPMTSideEnvelope">
+ <materialref ref="RichRichPMTEnvelopeMaterial"/>
+ <solidref ref="RichPMTSideEnvSubract_shape_0x4c4e510"/>
+</volume>
+<volume name="lvRichPMTBackEnvelope">
+ <materialref ref="RichRichPMTEnvelopeMaterial"/>
+ <solidref ref="RhPMTBackEnvBox_shape_0x4cbeb50"/>
+</volume>
+<volume name="lvRichPMTFrontRing">
+ <materialref ref="RichRichPMTEnvelopeMaterial"/>
+ <solidref ref="RichPMTFrontEnvSubtract_shape_0x4be51d0"/>
+</volume>
+<volume name="world_volume"><materialref ref="Air"/><solidref ref="world_volume_shape_0x4961250"/><physvol copynumber="3" name="pvRichPMTSideEnvelope">
+ <volumeref ref="lvRichPMTSideEnvelope"/>
+ <positionref ref="pvRichPMTSideEnvelopeinlvRichPMTSMasterpos"/>
+</physvol>
+<physvol copynumber="4" name="pvRichPMTBackEnvelope">
+ <volumeref ref="lvRichPMTBackEnvelope"/>
+ <positionref ref="pvRichPMTBackEnvelopeinlvRichPMTSMasterpos"/>
+</physvol>
+<physvol copynumber="5" name="pvRichPMTFrontRing">
+ <volumeref ref="lvRichPMTFrontRing"/>
+ <positionref ref="pvRichPMTFrontRinginlvRichPMTSMasterpos"/>
+</physvol>
+</volume></structure>
+<setup name="default" version="1.0">
+<world ref="world_volume"/>
+</setup></gdml>

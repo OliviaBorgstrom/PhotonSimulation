@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<position name="pvUX851Cyl01inlvUX851InRich1BeforeSubMpos" unit="cm" x="0" y="0" z="0.5"/>
+<position name="pvUX851Cyl02inlvUX851InRich1BeforeSubMpos" unit="cm" x="0" y="0" z="9"/>
+</define>
+<materials>
+<material name="Air">
+ <D unit="g/cm3" value="0.0011999999999999999"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+<element N="39" Z="18" formula="Ar" name="Ar_elm">
+ <atom unit="g/mole" value="39.947699999999998"/>
+</element>
+<element N="14" Z="7" formula="N" name="N_elm">
+ <atom unit="g/mole" value="14.0068"/>
+</element>
+<element N="15" Z="8" formula="O" name="O_elm">
+ <atom unit="g/mole" value="15.9994"/>
+</element>
+<element N="26" Z="13" formula="Al" name="Al_elm">
+ <atom unit="g/mole" value="26.9815"/>
+</element>
+<element N="63" Z="29" formula="Cu" name="Cu_elm">
+ <atom unit="g/mole" value="63.5456"/>
+</element>
+<element N="55" Z="26" formula="Fe" name="Fe_elm">
+ <atom unit="g/mole" value="55.845100000000002"/>
+</element>
+<element N="24" Z="12" formula="Mg" name="Mg_elm">
+ <atom unit="g/mole" value="24.305"/>
+</element>
+<element N="54" Z="25" formula="Mn" name="Mn_elm">
+ <atom unit="g/mole" value="54.938000000000002"/>
+</element>
+<element N="28" Z="14" formula="Si" name="Si_elm">
+ <atom unit="g/mole" value="28.0854"/>
+</element>
+<element N="47" Z="22" formula="Ti" name="Ti_elm">
+ <atom unit="g/mole" value="47.866700000000002"/>
+</element>
+<element N="50" Z="23" formula="V" name="V_elm">
+ <atom unit="g/mole" value="50.941499999999998"/>
+</element>
+<element N="65" Z="30" formula="Zn" name="Zn_elm">
+ <atom unit="g/mole" value="65.395499999999998"/>
+</element>
+<element N="91" Z="40" formula="Zr" name="Zr_elm">
+ <atom unit="g/mole" value="91.223600000000005"/>
+</element>
+<material name="PipeAl2219F">
+ <D unit="g/cm3" value="2.8399999999999999"/>
+ <fraction n="0.9328799843788147" ref="Al_elm"/>
+ <fraction n="0.059000000357627869" ref="Cu_elm"/>
+ <fraction n="0.0010999999940395355" ref="Fe_elm"/>
+ <fraction n="0.0010000000474974513" ref="Mg_elm"/>
+ <fraction n="0.002899999963119626" ref="Mn_elm"/>
+ <fraction n="0.00060000002849847078" ref="Si_elm"/>
+ <fraction n="0.00052000000141561031" ref="Ti_elm"/>
+ <fraction n="0.00079999997979030013" ref="V_elm"/>
+ <fraction n="9.9999997473787516e-05" ref="Zn_elm"/>
+ <fraction n="0.0010999999940395355" ref="Zr_elm"/>
+</material>
+</materials>
+<solids>
+<box name="world_volume_shape_0x4961250" x="100000" y="100000" z="100000" lunit="cm"/><tube aunit="deg" deltaphi="360" lunit="cm" name="UX85-1-Cylinder-01_shape_0x4ae5d20" rmax="30.5" rmin="27" startphi="0" z="1"/>
+<tube aunit="deg" deltaphi="360" lunit="cm" name="UX85-1-Cylinder-02_shape_0x4aea300" rmax="28.5" rmin="27" startphi="0" z="16"/>
+</solids>
+<structure>
+<volume name="lvUX851Cyl01">
+ <materialref ref="PipeAl2219F"/>
+ <solidref ref="UX85-1-Cylinder-01_shape_0x4ae5d20"/>
+</volume>
+<volume name="lvUX851Cyl02">
+ <materialref ref="PipeAl2219F"/>
+ <solidref ref="UX85-1-Cylinder-02_shape_0x4aea300"/>
+</volume>
+<volume name="world_volume"><materialref ref="Air"/><solidref ref="world_volume_shape_0x4961250"/><physvol copynumber="0" name="pvUX851Cyl01">
+ <volumeref ref="lvUX851Cyl01"/>
+ <positionref ref="pvUX851Cyl01inlvUX851InRich1BeforeSubMpos"/>
+</physvol>
+<physvol copynumber="1" name="pvUX851Cyl02">
+ <volumeref ref="lvUX851Cyl02"/>
+ <positionref ref="pvUX851Cyl02inlvUX851InRich1BeforeSubMpos"/>
+</physvol>
+</volume></structure>
+<setup name="default" version="1.0">
+<world ref="world_volume"/>
+</setup></gdml>

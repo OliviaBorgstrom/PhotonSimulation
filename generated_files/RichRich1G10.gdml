@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+<define>
+<position name="pvRich1ExitG10UpstrinlvRich1ExitWallMasterpos" unit="cm" x="0" y="0" z="-8.4499999999999993"/>
+<position name="pvRich1ExitG10DnstrinlvRich1ExitWallMasterpos" unit="cm" x="0" y="0" z="8.4499999999999993"/>
+</define>
+<materials>
+<material name="Air">
+ <D unit="g/cm3" value="0.0011999999999999999"/>
+ <fraction n="0.012000000104308128" ref="Ar_elm"/>
+ <fraction n="0.75400000810623169" ref="N_elm"/>
+ <fraction n="0.23399999737739563" ref="O_elm"/>
+</material>
+<element N="39" Z="18" formula="Ar" name="Ar_elm">
+ <atom unit="g/mole" value="39.947699999999998"/>
+</element>
+<element N="14" Z="7" formula="N" name="N_elm">
+ <atom unit="g/mole" value="14.0068"/>
+</element>
+<element N="15" Z="8" formula="O" name="O_elm">
+ <atom unit="g/mole" value="15.9994"/>
+</element>
+<element N="12" Z="6" formula="C" name="C_elm">
+ <atom unit="g/mole" value="12.0107"/>
+</element>
+<element N="1" Z="1" formula="H" name="H_elm">
+ <atom unit="g/mole" value="1.0079400000000001"/>
+</element>
+<material name="RichRich1G10">
+ <D unit="g/cm3" value="1.3700000000000001"/>
+ <fraction n="0.85708808898925781" ref="C_elm"/>
+ <fraction n="0.00323641044087708" ref="H_elm"/>
+ <fraction n="0.011243663728237152" ref="N_elm"/>
+ <fraction n="0.12843181192874908" ref="O_elm"/>
+</material>
+</materials>
+<solids>
+<box name="world_volume_shape_0x4961250" x="100000" y="100000" z="100000" lunit="cm"/><box lunit="cm" name="Rich1ExitUpG10HoleSub" x="1555" y="1321" z="0.69999999999999996"/>
+<tube aunit="deg" deltaphi="360" lunit="cm" name="Rich1ExitUpG10HoleSub0x1" rmax="91.099999999999994" rmin="0" startphi="0" z="1000"/>
+<subtraction name="Rich1ExitUpG10BeamPipeHole_shape_0x4b83ee0">
+ <first ref="Rich1ExitUpG10HoleSub"/>
+ <second ref="Rich1ExitUpG10HoleSub0x1"/>
+</subtraction>
+<box lunit="cm" name="Rich1ExitDnG10HoleSub" x="1555" y="1321" z="0.69999999999999996"/>
+<tube aunit="deg" deltaphi="360" lunit="cm" name="Rich1ExitDnG10HoleSub0x1" rmax="91.099999999999994" rmin="0" startphi="0" z="1000"/>
+<subtraction name="Rich1ExitDnG10BeamPipeHole_shape_0x4b83cd0">
+ <first ref="Rich1ExitDnG10HoleSub"/>
+ <second ref="Rich1ExitDnG10HoleSub0x1"/>
+</subtraction>
+</solids>
+<structure>
+<volume name="lvRich1ExitG10Upstr">
+ <materialref ref="RichRich1G10"/>
+ <solidref ref="Rich1ExitUpG10BeamPipeHole_shape_0x4b83ee0"/>
+</volume>
+<volume name="lvRich1ExitG10Dnstr">
+ <materialref ref="RichRich1G10"/>
+ <solidref ref="Rich1ExitDnG10BeamPipeHole_shape_0x4b83cd0"/>
+</volume>
+<volume name="world_volume"><materialref ref="Air"/><solidref ref="world_volume_shape_0x4961250"/><physvol copynumber="0" name="pvRich1ExitG10Upstr">
+ <volumeref ref="lvRich1ExitG10Upstr"/>
+ <positionref ref="pvRich1ExitG10UpstrinlvRich1ExitWallMasterpos"/>
+</physvol>
+<physvol copynumber="1" name="pvRich1ExitG10Dnstr">
+ <volumeref ref="lvRich1ExitG10Dnstr"/>
+ <positionref ref="pvRich1ExitG10DnstrinlvRich1ExitWallMasterpos"/>
+</physvol>
+</volume></structure>
+<setup name="default" version="1.0">
+<world ref="world_volume"/>
+</setup></gdml>
